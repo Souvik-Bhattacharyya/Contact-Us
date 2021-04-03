@@ -1,0 +1,257 @@
+{% extends 'base.html' %} {% load static %} {% block title %}
+<title>Studio Contour | Home</title>
+<link href="{% static 'css/index.css' %}" rel="stylesheet" />
+{% endblock %} {% block content %}
+<style>
+  @font-face {
+    font-family: Lobster-Regular;
+    src: url("{% static 'fonts/Lobster-Regular.ttf' %}");
+  }
+</style>
+
+<div id="home-page-banner" class="carousel slide mb-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="{% static 'images/banner/banner (1).jpg' %}"
+        class="d-block w-100"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="{% static 'images/banner/banner (2).jpg' %}"
+        class="d-block w-100"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="{% static 'images/banner/banner (3).jpg' %}"
+        class="d-block w-100"
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="{% static 'images/banner/banner (4).jpg' %}"
+        class="d-block w-100"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="container-md">
+  <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    <div class="row mb-5">
+      <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center">
+        <img
+          class="home-intro-img"
+          src="{% static 'images/about/serviceA.jpg' %}"
+        />
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <h2 class="home-sub-title">3D Rendering Expert</h2>
+        <hr
+          style="
+            width: 180px;
+            height: 2px;
+            border: none;
+            background: lime;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            opacity: 1;
+          "
+        />
+        <p>
+          We are Walkthrough Expert and a Leading 3D Architectural Rendering
+          company in India. 3D Power is an Architectural Visualization & 3D
+          Walkthrough Animation studio having expertise in 3D Photorealistic
+          Renderings, 3D Architectural Animation, 3D Virtual Tour Walkthrough &
+          Augmented reality, 3D Interior Rendering & Designing etc.<br /><br />
+
+          We have completed 18 years in the industry and worked on 37000+
+          projects worldwide. We provide High-quality modelling and rendering
+          services to our clients across the globe.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-md">
+  <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    <div class="row mb-5">
+      <div class="col-lg-6 col-md-6 col-sm-12 order-2 order-md-1">
+        <h2 class="home-sub-title">3D Rendering Expert</h2>
+        <hr
+          style="
+            width: 180px;
+            height: 2px;
+            border: none;
+            background: lime;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            opacity: 1;
+          "
+        />
+        <p>
+          We are Walkthrough Expert and a Leading 3D Architectural Rendering
+          company in India. 3D Power is an Architectural Visualization & 3D
+          Walkthrough Animation studio having expertise in 3D Photorealistic
+          Renderings, 3D Architectural Animation, 3D Virtual Tour Walkthrough &
+          Augmented reality, 3D Interior Rendering & Designing etc.<br /><br />
+
+          We have completed 18 years in the industry and worked on 37000+
+          projects worldwide. We provide High-quality modelling and rendering
+          services to our clients across the globe.
+        </p>
+      </div>
+      <div
+        class="col-lg-6 col-md-6 col-sm-12 order-1 order-md-2 d-flex justify-content-center"
+      >
+        <img
+          class="home-intro-img"
+          src="{% static 'images/about/serviceA.jpg' %}"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-md" style="margin-top: 5rem; margin-bottom: 5rem">
+  <h3 class="w-100 text-center">
+    <span class="text-primary">Clients</span> Testimonial
+  </h3>
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center">
+          <img
+            src="{{rv.img.url}}"
+            style="
+              object-fit: scale-down;
+              border-radius: 32px;
+              width: 64px;
+              height: 64px;
+              background: #ddd;
+              margin-top: 2rem;
+              margin-bottom: 2rem;
+            "
+          />
+        </div>
+        <p class="w-100 text-center" style="max-width: 700px; margin: auto">
+          {{rv.review}}
+        </p>
+        <h5 class="w-100 text-center mt-5">-- {{rv.name}}</h5>
+      </div>
+      {% for rv in reviews %}
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+          <img
+            src="{{rv.img.url}}"
+            style="
+              object-fit: scale-down;
+              border-radius: 32px;
+              width: 64px;
+              height: 64px;
+              background: #ddd;
+              margin-top: 2rem;
+              margin-bottom: 2rem;
+            "
+          />
+        </div>
+        <p class="w-100 text-center" style="max-width: 700px; margin: auto">
+          {{rv.review}}
+        </p>
+        <h5 class="w-100 text-center mt-5">-- {{rv.name}}</h5>
+      </div>
+      {% endfor %}
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+  <div class="container-md mb-5">
+    <h2 class="w-100 text-center">Our Latest Projects</h2>
+    <hr
+      style="
+        margin: auto;
+        width: 15rem;
+        height: 8px;
+        background: blueviolet;
+        border: none;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        opacity: 1;
+      "
+    />
+    <div
+      style="width: 100%; max-width: 100%; overflow-x: scroll; display: flex"
+    >
+      {% for proj in projects %}
+      <div class="card me-3" style="width: 18rem; min-width: 18rem">
+        <a href="{% url 'details' proj.id %}">
+          <img
+            src="{{proj.thumb}}"
+            class="card-img-top"
+            style="width: 100%; height: 10rem; object-fit: cover"
+          />
+          <div class="card-body">
+            <p class="card-text">{{proj.title}}</p>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  var myCarousel = document.querySelector("#home-page-banner");
+  var carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 2000,
+    pause: false,
+  });
+</script>
+{% endblock %}

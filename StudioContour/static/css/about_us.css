@@ -1,0 +1,78 @@
+.top-banner {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  z-index: -999;
+  height: 50vh;
+}
+.ml13 {
+  font-size: 1.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-weight: 600;
+}
+
+.ml13 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+.board-of-director img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: scale-down;
+  background-color: #ddd;
+}
+.board-of-director h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 100%;
+}
+.board-of-director p {
+  width: 100%;
+  text-align: center;
+  color: #888;
+}
+.each-service {
+  display: flex;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+.each-service.odd {
+  justify-content: flex-end;
+}
+.each-service img {
+  max-width: 600px;
+  object-fit: scale-down;
+}
+.service-info {
+  width: 50%;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.service-info p {
+  padding: 0.8rem;
+  font-size: 18px;
+  font-family: Montserrat-Regular;
+}
+@media screen and (max-width: 1100px) {
+  .each-service {
+    flex-direction: column;
+  }
+  .each-service img {
+    width: 95%;
+    max-width: 95%;
+    margin: auto;
+    order: 1;
+  }
+  .service-info {
+    width: 90%;
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    order: 2;
+  }
+}

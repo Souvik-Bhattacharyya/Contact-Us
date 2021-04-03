@@ -1,0 +1,22 @@
+{% load static %} {% block title %}
+<title>{{porject.title}}</title>
+{% endblock %} {% block content %}
+<div
+  id="carouselExampleSlidesOnly"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{img.image.url}}" class="d-block w-100" max-height="200px"/>
+    </div>
+    {% for img in imgs %}
+    <div class="carousel-item active">
+      <img src="{{img.image.url}}" class="d-block w-100" max-height="200px"/>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<h1 class="w-100 text-center mt-5">{{project.title}}</h1>
+{% endblock %}
+ 

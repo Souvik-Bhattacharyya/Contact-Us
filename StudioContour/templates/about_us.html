@@ -1,0 +1,194 @@
+{% extends 'base.html' %} {% load static %} {% block title %}
+<title>Studio Contour | About Us</title>
+<link href="{% static 'css/about_us.css' %}" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<style>
+  @font-face {
+    font-family: Montserrat-Regular;
+    src: url("{% static 'fonts/Montserrat-Regular.ttf' %}");
+  }
+</style>
+{% endblock %} {% block content %}
+<div>
+  <img class="top-banner" src="{% static 'images/banner/about_us_bg.jpg' %}" />
+  <div style="display: flex; justify-content: center; padding-top: 51vh">
+    <h1 class="ml13">About Us</h1>
+  </div>
+  <hr
+    style="
+      margin: auto;
+      width: 15rem;
+      height: 8px;
+      background: blueviolet;
+      border: none;
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+      opacity: 1;
+    "
+  />
+  <div>
+    <p
+      style="
+        padding: 2rem;
+        font-size: 19px;
+        color: #000;
+        font-family: Montserrat-Regular;
+      "
+    >
+      This is a long long long about us text for testing the design and the
+      backend of studio contour. This is a long long long about us text for
+      testing the design and the backend of studio contour. This is a long long
+      long about us text for testing the design and the backend of studio
+      contour. This is a long long long about us text for testing the design and
+      the backend of studio contour. This is a long long long about us text for
+      testing the design and the backend of studio contour. This is a long long
+      long about us text for testing the design and the backend of studio
+      contour. This is a long long long about us text for testing the design and
+      the backend of studio contour.<br /><br />This is a long long long about
+      us text for testing the design and the backend of studio contour. This is
+      a long long long about us text for testing the design and the backend of
+      studio contour. This is a long long long about us text for testing the
+      design and the backend of studio contour. This is a long long long about
+      us text for testing the design and the backend of studio contour. This is
+      a long long long about us text for testing the design and the backend of
+      studio contour.
+    </p>
+    <div style="display: flex; justify-content: center; margin-top: 3rem">
+      <div class="board-of-director">
+        <img src="{% static 'images/avatar.png' %}" />
+        <h2>Sumana Kumar</h2>
+        <p>CEO & Founder</p>
+      </div>
+    </div>
+    <div style="margin-top: 5rem">
+      <h2 style="width: 100%; text-align: center">Our Services</h2>
+      <hr
+        style="
+          margin: auto;
+          width: 15rem;
+          height: 8px;
+          background: blueviolet;
+          border: none;
+          margin-top: 2rem;
+          margin-bottom: 4rem;
+          opacity: 1;
+        "
+      />
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          max-width: 1200px;
+          margin: auto;
+        "
+      >
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+          <div class="each-service">
+            <img src="{% static 'images/about/serviceA.jpg' %}" />
+            <div class="service-info">
+              <h2>Service A</h2>
+              <hr
+                style="
+                  width: 180px;
+                  height: 2px;
+                  border: none;
+                  background: lime;
+                  margin-top: 1rem;
+                  margin-bottom: 1rem;
+                  opacity: 1;
+                "
+              />
+              <p>
+                This is a sample service description. This is a sample service
+                description. This is a sample service description. This is a
+                sample service description. This is a sample service
+                description. This is a sample service description.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+          <div class="each-service odd">
+            <div class="service-info">
+              <h2>Service B</h2>
+              <hr
+                style="
+                  width: 180px;
+                  height: 2px;
+                  border: none;
+                  background: lime;
+                  margin-top: 1rem;
+                  margin-bottom: 1rem;
+                  opacity: 1;
+                "
+              />
+              <p>
+                This is a sample service description. This is a sample service
+                description. This is a sample service description. This is a
+                sample service description. This is a sample service
+                description. This is a sample service description.
+              </p>
+            </div>
+            <img src="{% static 'images/about/serviceA.jpg' %}" />
+          </div>
+        </div>
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+          <div class="each-service">
+            <img src="{% static 'images/about/serviceA.jpg' %}" />
+            <div class="service-info">
+              <h2>Service C</h2>
+              <hr
+                style="
+                  width: 180px;
+                  height: 2px;
+                  border: none;
+                  background: lime;
+                  margin-top: 1rem;
+                  margin-bottom: 1rem;
+                  opacity: 1;
+                "
+              />
+              <p>
+                This is a sample service description. This is a sample service
+                description. This is a sample service description. This is a
+                sample service description. This is a sample service
+                description. This is a sample service description.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+          <div class="each-service odd">
+            <div class="service-info">
+              <h2>Service D</h2>
+              <hr
+                style="
+                  width: 180px;
+                  height: 2px;
+                  border: none;
+                  background: lime;
+                  margin-top: 1rem;
+                  margin-bottom: 1rem;
+                  opacity: 1;
+                "
+              />
+              <p>
+                This is a sample service description. This is a sample service
+                description. This is a sample service description. This is a
+                sample service description. This is a sample service
+                description. This is a sample service description.
+              </p>
+            </div>
+            <img src="{% static 'images/about/serviceA.jpg' %}" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{% static 'js/about_us.js' %}"></script>
+<script>
+  AOS.init();
+</script>
+{% endblock %}

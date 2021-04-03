@@ -1,0 +1,74 @@
+{% extends 'base.html' %} {% load static %} {% block title %}
+<title>Studio Contour | Our Projects</title>
+<link href="{% static 'css/our_projects.css' %}" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<style>
+  @font-face {
+    font-family: Montserrat-Regular;
+    src: url("{% static 'fonts/Montserrat-Regular.ttf' %}");
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="category-selector">
+  <ul>
+    <li><a href="{% url 'our_projects' %}">All category</a></li>
+    <li><a href="{% url 'our_projects_category' 0 %}">Residental</a></li>
+    <li>
+      <a href="{% url 'our_projects_category' 1 %}">Commercial</a>
+    </li>
+    <li><a href="{% url 'our_projects_category' 2 %}">Institutional</a></li>
+    <li><a href="{% url 'our_projects_category' 3 %}">Others</a></li>
+  </ul>
+</div>
+<div style="margin-bottom: 10rem">
+  <h1
+    class="ml9"
+    style="
+      width: 100%;
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: -8rem;
+    "
+  >
+    <span class="text-wrapper">
+      <span class="letters">Our Projects</span>
+    </span>
+  </h1>
+</div>
+<div class="project-canvas">
+  {% for proj in projects %}
+  <div data-aos="fade-up" data-aos-duration="3000">
+    <div class="project-card">
+      <a href="{% url 'details' proj.id %}">
+        <div class="project-card-img">
+          <img src="{{proj.thumb}}" />
+        </div>
+        <h2>{{proj.title}}</h2>
+      </a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+        >Previous</a
+      >
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</div>
+
+<script src="{% static 'js/our_projects.js' %}"></script>
+<script>
+  AOS.init();
+</script>
+{% endblock %}

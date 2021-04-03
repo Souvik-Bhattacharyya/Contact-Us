@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% load static %} {% block title %}
+<title>StudioContour | Gallery</title>
+<link href="{% static 'css/gallery.css' %}" rel="stylesheet" />
+{% endblock %} {% block content %}
+<h1 style="width: 100%; display: flex; justify-content: center">Gallery</h1>
+<hr
+  style="
+    margin: auto;
+    width: 15rem;
+    height: 8px;
+    background: blueviolet;
+    border: none;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    opacity: 1;
+  "
+/>
+<div class="gallery-canvas" style="margin-bottom: 4rem">
+  {% for img in images %}
+  <img class="each-img" src="{{img.image.url}}" />
+  {% endfor %}
+</div>
+
+<div aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+        >Previous</a
+      >
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</div>
+
+{% endblock %}
